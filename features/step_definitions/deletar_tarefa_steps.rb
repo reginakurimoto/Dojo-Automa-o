@@ -1,4 +1,4 @@
-Quando(/^encontrar o "([^"]*)" pesquisado$/) do |arg1|
+Quando(/^encontrar o "([^"]*)" pesquisado$/) do |nome|
     @login.username.set('will')
     @login.password.set('will')
     @login.loginbutton.click
@@ -14,7 +14,7 @@ end
 
 Quando(/^efetuar a delecao e clicar em salvar$/) do
    	@deletar = Deletar.new    
-    @deletar.selection_name.click
+    @deletar.selecao_del.click
   	@deletar.action_link.click
   	@deletar.delete_task.click
 end
